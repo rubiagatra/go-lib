@@ -32,6 +32,7 @@ var ptSystemName string
 var activeLogLevel = strings.ToUpper(os.Getenv("LOG_LEVEL"))
 
 func parseLogLevel() string {
+	activeLogLevel = strings.ToUpper(os.Getenv("LOG_LEVEL"))
 	switch activeLogLevel {
 	case LogLevelTrace, LogLevelDebug, LogLevelInfo, LogLevelWarning, LogLevelError:
 	default:
