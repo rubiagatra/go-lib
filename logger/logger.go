@@ -48,7 +48,7 @@ func formatterRFC3164(p syslog.Priority, hostname, tag, content string) string {
 
 // SetupLoggerAuto creates logger instance to log to PaperTrail automatically without specifying PT HOST and PORT
 func SetupLoggerAuto(appName string, ptEndpoint string, logLevelStr string) {
-	activeLogLevel = parseLogLevel(logLevelStr)
+	parseLogLevel(logLevelStr)
 	log.SetPrefix("")
 	log.SetFlags(0)
 
