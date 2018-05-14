@@ -28,8 +28,7 @@ var logLevel = map[string]int{
 }
 
 var ptSystemName string
-
-var activeLogLevel = strings.ToUpper(os.Getenv("LOG_LEVEL"))
+var activeLogLevel string
 
 func parseLogLevel() string {
 	activeLogLevel = strings.ToUpper(os.Getenv("LOG_LEVEL"))
