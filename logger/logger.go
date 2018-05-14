@@ -28,10 +28,10 @@ var logLevel = map[string]int{
 
 var ptSystemName, activeLogLevel string
 
-func parseLogLevel(logLevelString string) string {
-	switch logLevelString {
+func parseLogLevel(logLevelStr string) string {
+	switch logLevelStr {
 	case LogLevelTrace, LogLevelDebug, LogLevelInfo, LogLevelWarning, LogLevelError:
-		activeLogLevel = logLevelString
+		activeLogLevel = logLevelStr
 	default:
 		activeLogLevel = LogLevelTrace
 	}
