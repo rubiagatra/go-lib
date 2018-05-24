@@ -22,6 +22,17 @@ func IsNumeric(s string) bool {
 	return true
 }
 
+// Bool2String returns true or false depending on input
 func Bool2String(b bool) string {
 	return strconv.FormatBool(b)
+}
+
+// IsStringInSlice check if string exists in array
+func IsStringInSlice(s string, list []string) bool {
+	for _, val := range list {
+		if val == s {
+			return true
+		}
+	}
+	return false
 }
