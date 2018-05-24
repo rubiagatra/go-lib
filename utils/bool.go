@@ -27,7 +27,7 @@ func Bool2String(b bool) string {
 	return strconv.FormatBool(b)
 }
 
-// IsStringInSlice check if string exists in array
+// IsStringInSlice check if string exists in slice
 func IsStringInSlice(s string, list []string) bool {
 	for _, val := range list {
 		if val == s {
