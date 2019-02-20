@@ -23,7 +23,7 @@ type (
 		GetOrLock(string) (interface{}, *redsync.Mutex, error)
 		Store(*redsync.Mutex, Item) error
 		Purge(string) error
-		IncrementStoredInteger(key string) error
+		Increase(key string) error
 
 		AcquireLock(string) (*redsync.Mutex, error)
 		SetDefaultTTL(time.Duration)
@@ -142,9 +142,9 @@ func (k *keeper) Purge(matchString string) error {
 	return err
 }
 
-// IncrementStoredInteger will increments the number stored at key by one.
+// Increase will increments the number stored at key by one.
 // If the key does not exist, it is set to 0 before performing the operation
-func (k *keeper) IncrementStoredInteger(key string) error {
+func (k *keeper) Increase(key string) error {
 	if k.disableCaching {
 		return nil
 	}
