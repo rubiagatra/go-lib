@@ -15,8 +15,8 @@ func ToByte(i interface{}) []byte {
 	return bt
 }
 
-// InterfaceBytesToInt64 will transform cached value that get from the redis to Int64
-func InterfaceBytesToInt64(i interface{}) int64 {
+// InterfaceByteToInt64 will transform cached value that get from the redis to Int64
+func InterfaceByteToInt64(i interface{}) int64 {
 	if i != nil {
 		bt := i.([]byte)
 
