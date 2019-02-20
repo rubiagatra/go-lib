@@ -144,7 +144,7 @@ func (k *keeper) Purge(matchString string) error {
 
 // IncrementStoredInteger will increments the number stored at key by one.
 // If the key does not exist, it is set to 0 before performing the operation
-func (k *keeper) Increment(key string) error {
+func (k *keeper) IncrementStoredInteger(key string) error {
 	if k.disableCaching {
 		return nil
 	}
