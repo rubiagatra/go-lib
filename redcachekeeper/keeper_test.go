@@ -128,7 +128,7 @@ func TestDecideCacheTTL(t *testing.T) {
 	assert.Equal(t, i2.GetTTLFloat64(), k.decideCacheTTL(i))
 }
 
-func TestIncreaseByOne(t *testing.T) {
+func TestIncreaseCachedValueByOne(t *testing.T) {
 	// Initialize new cache keeper
 	k := NewKeeper()
 
@@ -146,7 +146,7 @@ func TestIncreaseByOne(t *testing.T) {
 	err = k.Store(mu, NewItem(testKey, 0))
 	assert.NoError(t, err)
 
-	err = k.IncreaseByOne(testKey)
+	err = k.IncreaseCachedValueByOne(testKey)
 	assert.NoError(t, err)
 
 	reply, mu, err := k.GetOrLock(testKey)
